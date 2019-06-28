@@ -36,7 +36,6 @@ export class DialogContentComponent implements OnInit {
     this.http
       .get(`${this.appUrl}card/${this.data.cardId}/`)
       .subscribe((card: Card) => {
-        console.log(card);
         this.cardService.card = { ...card, id: this.data.cardId };
       });
   }
@@ -53,7 +52,6 @@ export class DialogContentComponent implements OnInit {
   //   TodoID,
   //   titleInput
   // ) {
-  //   console.log(inputComment.value);
   //   this.updateData = {
   //     cardContent: cardContent.value,
   //     commentContent: inputComment.value,
